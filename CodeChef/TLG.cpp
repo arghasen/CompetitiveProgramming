@@ -5,7 +5,12 @@ typedef long long int  ll;
 
 int main()
 {
-    int t,a,b,sa,sb;
+#ifndef ONLINE_JUDGE
+    freopen("input.txt", "r", stdin); // redirects standard input
+    freopen("output.txt", "w", stdout); // redirects standard output
+#endif
+
+    int t,a,b,sa=0,sb=0;
     cin>>t;
     int lead[t];
    for (auto i = 0; i < t; i++) {
@@ -22,4 +27,5 @@ int main()
    else
        cout<<"2 "<<abs(*blead);
    cout<<endl;
+   return 0;
 }
