@@ -13,14 +13,17 @@ int main()
 #endif
     int T;
     cin>>T;
-    while(T--)
+    F(t,0,T)
     {
         int N;
         cin>>N;
+        int max_speed=INT_MIN, cur;
         F(i,0,N)
         {
-
+            cin>>cur;
+            max_speed= max(cur,max_speed);
         }
+        cout<<"Case "<<t+1<<": "<< max_speed<<endl;
     }
     return 0;
 }
