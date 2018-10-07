@@ -11,12 +11,28 @@ int main()
     freopen("input.txt", "r", stdin);   // redirects standard input
     freopen("output.txt", "w", stdout); // redirects standard output
 #endif
-    long v, t;
-    std::ios_base::sync_with_stdio(false);
-    std::cin.tie(nullptr);
-    while (cin >> v >> t)
+    int N;
+
+    while (cin >> N)
     {
-        cout << v * t * 2 << "\n";
+        int a, b;
+        cin >> a;
+        bitset<3000> check;
+
+        F(i, 0, N - 1)
+        {
+            cin >> b;
+            if (a == b || abs(a - b) > N - 1)
+                continue;
+            check.set(abs(a - b));
+            a = b;
+        }
+        int k = check.count();
+
+        if (k == N - 1)
+            cout << "Jolly\n";
+        else
+            cout << "Not jolly\n";
     }
     return 0;
 }
