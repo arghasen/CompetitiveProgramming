@@ -4,5 +4,6 @@ a.out
 *.o
 input.txt
 output.txt
+test.txt
 *.exe
 vscode-workspace.code-workspace
