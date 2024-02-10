@@ -34,4 +34,25 @@ void solve()
 {
     int n;
     cin >> n;
+    ll f, a, b;
+    cin >> f >> a >> b;
+    vi v(n);
+    F(i, 0, n)
+    {
+        cin >> v[i];
+    }
+    int last = 0;
+    F(i, 0, n)
+    {
+        auto on = (v[i] - last) * a;
+        f -= (on < b) ? on : b;
+        // cout << f << " " << (on < b) << endl;
+        if (f <= 0)
+        {
+            cout << "NO" << endl;
+            return;
+        }
+        last = v[i];
+    }
+    cout << "YES" << endl;
 }

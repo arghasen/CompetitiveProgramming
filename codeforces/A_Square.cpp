@@ -32,6 +32,13 @@ int main()
 
 void solve()
 {
-    int n;
-    cin >> n;
+    int x[4];
+    int y[4];
+    cin >> x[0] >> y[0] >> x[1] >> y[1];
+    cin >> x[2] >> y[2] >> x[3] >> y[3];
+    sort(x, x + 4);
+    sort(y, y + 4);
+    auto l1 = abs(x[3] - x[0]);
+    auto l2 = abs(y[3] - y[0]);
+    cout << l1 * l2 << endl;
 }

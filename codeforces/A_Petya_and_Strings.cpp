@@ -21,17 +21,26 @@ int main()
     freopen("input.txt", "r", stdin);   // redirects standard input
     freopen("output.txt", "w", stdout); // redirects standard output
 #endif
-    int T;
-    cin >> T;
-    while (T--)
-    {
-        solve();
-    }
+    solve();
     return 0;
 }
 
 void solve()
 {
-    int n;
-    cin >> n;
+    string s, t;
+    cin >> s >> t;
+    F(i, 0, s.size())
+    {
+        if (tolower(s[i]) < tolower(t[i]))
+        {
+            cout << "-1" << endl;
+            return;
+        }
+        else if (tolower(s[i]) > tolower(t[i]))
+        {
+            cout << "1" << endl;
+            return;
+        }
+    }
+    cout << "0" << endl;
 }

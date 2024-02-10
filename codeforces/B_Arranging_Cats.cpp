@@ -11,6 +11,7 @@ using vvi = vector<vi>;
 using pii = pair<int, int>;
 using pll = pair<ll, ll>;
 using vll = vector<ll>;
+
 void solve();
 int main()
 {
@@ -34,4 +35,20 @@ void solve()
 {
     int n;
     cin >> n;
+    string s, t;
+    cin >> s >> t;
+    int extraS = 0, extraT = 0;
+    F(i, 0, s.size())
+    {
+
+        if (s[i] == '1' && t[i] == '0')
+        {
+            extraS++;
+        }
+        else if (s[i] == '0' && t[i] == '1')
+        {
+            extraT++;
+        }
+    }
+    cout << max(extraS, extraT) << endl;
 }

@@ -34,4 +34,12 @@ void solve()
 {
     int n;
     cin >> n;
+    string s;
+    cin >> s;
+    ll ans = 0;
+    F(i, 0, s.size())
+    {
+        (s[i] == '+') ? ans++ : ans--;
+    }
+    cout << abs(ans) << endl;
 }

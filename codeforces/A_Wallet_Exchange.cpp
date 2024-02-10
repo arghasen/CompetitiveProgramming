@@ -32,6 +32,8 @@ int main()
 
 void solve()
 {
-    int n;
-    cin >> n;
+    ll n, m;
+    cin >> n >> m;
+    ll sum = n + m;
+    (sum % 2 == 1) ? cout << "Alice\n" : cout << "Bob\n";
 }

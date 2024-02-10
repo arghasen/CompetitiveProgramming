@@ -32,6 +32,7 @@ int main()
 
 void solve()
 {
-    int n;
-    cin >> n;
+    int n, m;
+    cin >> n >> m;
+    cout << n * (m / 2) << endl;
 }
