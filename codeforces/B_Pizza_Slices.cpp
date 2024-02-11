@@ -4,10 +4,6 @@ using namespace std;
 #define FE(i, L, R) for (int i = L; i <= R; i++)
 #define FF(i, L, R) for (int i = L; i > R; i--)
 #define FFE(i, L, R) for (int i = L; i >= R; i--)
-#define F first
-#define S second
-#define PB push_back
-#define MP make_pair
 
 using ll = long long;
 using vi = vector<int>;
@@ -25,18 +21,13 @@ int main()
     freopen("input.txt", "r", stdin);   // redirects standard input
     freopen("output.txt", "w", stdout); // redirects standard output
 #endif
-    int T;
-    cin >> T;
-    while (T--)
-    {
-        solve();
-    }
-    // solve();
+    solve();
     return 0;
 }
 
 void solve()
 {
-    int n;
-    cin >> n;
+    ll n, m, k;
+    cin >> n >> m >> k;
+    cout << (((n * 8 % m == 0) && (n * 8 >= m * k)) ? "TRUE" : "FALSE") << endl;
 }

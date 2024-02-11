@@ -4,10 +4,6 @@ using namespace std;
 #define FE(i, L, R) for (int i = L; i <= R; i++)
 #define FF(i, L, R) for (int i = L; i > R; i--)
 #define FFE(i, L, R) for (int i = L; i >= R; i--)
-#define F first
-#define S second
-#define PB push_back
-#define MP make_pair
 
 using ll = long long;
 using vi = vector<int>;

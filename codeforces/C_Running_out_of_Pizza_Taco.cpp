@@ -4,10 +4,6 @@ using namespace std;
 #define FE(i, L, R) for (int i = L; i <= R; i++)
 #define FF(i, L, R) for (int i = L; i > R; i--)
 #define FFE(i, L, R) for (int i = L; i >= R; i--)
-#define F first
-#define S second
-#define PB push_back
-#define MP make_pair
 
 using ll = long long;
 using vi = vector<int>;
@@ -25,13 +21,13 @@ int main()
     freopen("input.txt", "r", stdin);   // redirects standard input
     freopen("output.txt", "w", stdout); // redirects standard output
 #endif
-    int T;
-    cin >> T;
-    while (T--)
-    {
-        solve();
-    }
-    // solve();
+    // int T;
+    // cin >> T;
+    // while (T--)
+    // {
+    //     solve();
+    // }
+    solve();
     return 0;
 }
 
@@ -39,4 +35,19 @@ void solve()
 {
     int n;
     cin >> n;
+    int p, t, s;
+    cin >> p >> t >> s;
+
+    int maxSauce = s / 2;
+    int maxSaucePeople = min(maxSauce, n);
+    int remP = p - 2 * n - maxSaucePeople;
+    int remT = t - 2 * n - maxSaucePeople;
+    if (remP <= 0 || remT <= 0)
+    {
+        cout << "yes" << endl;
+    }
+    else
+    {
+        cout << "no" << endl;
+    }
 }
